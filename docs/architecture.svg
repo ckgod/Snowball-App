@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 820" width="1100" height="820" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f1a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="hdr" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="50%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <filter id="s">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#00000055"/>
+    </filter>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#475569"/>
+    </marker>
+    <marker id="arrB" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#60a5fa"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="820" fill="url(#bg)"/>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0L0 0 0 40" fill="none" stroke="#ffffff06" stroke-width="0.5"/>
+  </pattern>
+  <rect width="1100" height="820" fill="url(#grid)"/>
+
+  <!-- ── HEADER ── -->
+  <rect x="30" y="20" width="1040" height="60" rx="10" fill="url(#hdr)" filter="url(#s)"/>
+  <text x="550" y="44" text-anchor="middle" fill="white" font-size="20" font-weight="700" letter-spacing="3">SNOWBALL</text>
+  <text x="550" y="64" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="12" letter-spacing="4">KOTLIN MULTIPLATFORM · INVESTMENT APP</text>
+
+  <!-- ── PLATFORM ROW ── -->
+  <rect x="30" y="100" width="500" height="52" rx="8" fill="#111827" stroke="#22c55e" stroke-width="1.5" filter="url(#s)"/>
+  <text x="170" y="121" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="700">🤖 Android</text>
+  <text x="170" y="140" text-anchor="middle" fill="#6ee7b7" font-size="10">Compose Multiplatform · minSdk 24</text>
+  <line x1="300" y1="108" x2="300" y2="144" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="420" y="121" text-anchor="middle" fill="#818cf8" font-size="13" font-weight="700">🍎 iOS</text>
+  <text x="420" y="140" text-anchor="middle" fill="#a5b4fc" font-size="10">Compose Multiplatform · Arm64</text>
+
+  <rect x="570" y="100" width="500" height="52" rx="8" fill="#111827" stroke="#f59e0b" stroke-width="1.5" filter="url(#s)"/>
+  <text x="820" y="121" text-anchor="middle" fill="#fcd34d" font-size="12" font-weight="600">Kotlin Multiplatform · Coroutines · kotlinx-serialization</text>
+  <text x="820" y="140" text-anchor="middle" fill="#94a3b8" font-size="10">commonMain 공유 코드 · androidMain / iosMain 플랫폼 분기</text>
+
+  <!-- ── NAVIGATION MODULE ── -->
+  <rect x="380" y="173" width="340" height="44" rx="8" fill="#1c1a08" stroke="#eab308" stroke-width="1.5" filter="url(#s)"/>
+  <text x="550" y="191" text-anchor="middle" fill="#eab308" font-size="12" font-weight="700">:navigation</text>
+  <text x="550" y="208" text-anchor="middle" fill="#fde68a" font-size="10">Decompose · 화면 전환 · Back Stack 관리</text>
+
+  <!-- arrow platform → navigation -->
+  <line x1="550" y1="152" x2="550" y2="173" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ── FEATURE MODULES ── -->
+  <rect x="30" y="237" width="1040" height="130" rx="10" fill="#12102a" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="6,3" filter="url(#s)"/>
+  <text x="55" y="258" fill="#a78bfa" font-size="10" font-weight="700" letter-spacing="2">FEATURE MODULES</text>
+
+  <rect x="55" y="263" width="220" height="88" rx="7" fill="#1c1538" stroke="#6d28d9" stroke-width="1.2"/>
+  <text x="165" y="284" text-anchor="middle" fill="#c4b5fd" font-size="12" font-weight="700">:feature:home</text>
+  <text x="165" y="302" text-anchor="middle" fill="#8b5cf6" font-size="10">포트폴리오 · 투자 현황</text>
+  <text x="165" y="318" text-anchor="middle" fill="#6d28d9" font-size="9">Component + Screen</text>
+  <text x="165" y="342" text-anchor="middle" fill="#4c1d95" font-size="9">StateFlow · onEvent()</text>
+
+  <rect x="295" y="263" width="220" height="88" rx="7" fill="#1c1538" stroke="#6d28d9" stroke-width="1.2"/>
+  <text x="405" y="284" text-anchor="middle" fill="#c4b5fd" font-size="12" font-weight="700">:feature:account</text>
+  <text x="405" y="302" text-anchor="middle" fill="#8b5cf6" font-size="10">계좌 관리</text>
+  <text x="405" y="318" text-anchor="middle" fill="#6d28d9" font-size="9">Component + Screen</text>
+  <text x="405" y="342" text-anchor="middle" fill="#4c1d95" font-size="9">StateFlow · onEvent()</text>
+
+  <rect x="535" y="263" width="220" height="88" rx="7" fill="#1c1538" stroke="#6d28d9" stroke-width="1.2"/>
+  <text x="645" y="284" text-anchor="middle" fill="#c4b5fd" font-size="12" font-weight="700">:feature:backtest</text>
+  <text x="645" y="302" text-anchor="middle" fill="#8b5cf6" font-size="10">백테스트 엔진 · 결과 차트</text>
+  <text x="645" y="318" text-anchor="middle" fill="#6d28d9" font-size="9">Component + Screen</text>
+  <text x="645" y="342" text-anchor="middle" fill="#4c1d95" font-size="9">StateFlow · onEvent()</text>
+
+  <rect x="775" y="263" width="265" height="88" rx="7" fill="#1c1538" stroke="#6d28d9" stroke-width="1.2"/>
+  <text x="907" y="284" text-anchor="middle" fill="#c4b5fd" font-size="12" font-weight="700">:feature:detail</text>
+  <text x="907" y="302" text-anchor="middle" fill="#8b5cf6" font-size="10">종목 상세 · 가격 히스토리</text>
+  <text x="907" y="318" text-anchor="middle" fill="#6d28d9" font-size="9">Component + Screen</text>
+  <text x="907" y="342" text-anchor="middle" fill="#4c1d95" font-size="9">StateFlow · onEvent()</text>
+
+  <!-- arrow navigation → feature -->
+  <line x1="550" y1="217" x2="550" y2="237" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ── CORE MODULES ── -->
+  <!-- core:ui -->
+  <rect x="30" y="393" width="330" height="100" rx="10" fill="#091827" stroke="#38bdf8" stroke-width="1.5" filter="url(#s)"/>
+  <text x="50" y="414" fill="#7dd3fc" font-size="10" font-weight="700" letter-spacing="2">CORE : UI</text>
+  <text x="195" y="438" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="700">공통 UI 컴포넌트</text>
+  <text x="195" y="456" text-anchor="middle" fill="#7dd3fc" font-size="10">SectionCard · CurrencyToggle · PullToRefresh</text>
+  <text x="195" y="472" text-anchor="middle" fill="#475569" font-size="9">Theme · Colors · Typography</text>
+  <text x="195" y="486" text-anchor="middle" fill="#475569" font-size="9">Material3 · Compose Foundation</text>
+
+  <!-- core:domain -->
+  <rect x="385" y="393" width="330" height="100" rx="10" fill="#09270f" stroke="#34d399" stroke-width="1.5" filter="url(#s)"/>
+  <text x="405" y="414" fill="#6ee7b7" font-size="10" font-weight="700" letter-spacing="2">CORE : DOMAIN</text>
+  <text x="550" y="438" text-anchor="middle" fill="#34d399" font-size="13" font-weight="700">비즈니스 로직 · UseCase</text>
+  <text x="550" y="456" text-anchor="middle" fill="#6ee7b7" font-size="10">Repository Interface 정의</text>
+  <text x="550" y="472" text-anchor="middle" fill="#475569" font-size="9">순수 Kotlin · 프레임워크 의존 없음</text>
+  <text x="550" y="486" text-anchor="middle" fill="#475569" font-size="9">Flow&lt;Result&lt;T&gt;&gt; 반환</text>
+
+  <!-- core:data -->
+  <rect x="740" y="393" width="330" height="100" rx="10" fill="#27180a" stroke="#fb923c" stroke-width="1.5" filter="url(#s)"/>
+  <text x="760" y="414" fill="#fdba74" font-size="10" font-weight="700" letter-spacing="2">CORE : DATA</text>
+  <text x="905" y="438" text-anchor="middle" fill="#fb923c" font-size="13" font-weight="700">데이터 접근 · Repository</text>
+  <text x="905" y="456" text-anchor="middle" fill="#fdba74" font-size="10">Repository 구현체 · Ktor HttpClient</text>
+  <text x="905" y="472" text-anchor="middle" fill="#475569" font-size="9">Result&lt;T&gt; (Success / Error / Loading)</text>
+  <text x="905" y="486" text-anchor="middle" fill="#475569" font-size="9">OkHttp (Android) · Darwin (iOS)</text>
+
+  <!-- arrows feature → core -->
+  <line x1="250" y1="367" x2="195" y2="393" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#arr)"/>
+  <line x1="550" y1="367" x2="550" y2="393" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#arr)"/>
+  <line x1="850" y1="367" x2="905" y2="393" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#arr)"/>
+
+  <!-- arrow domain → data -->
+  <line x1="715" y1="443" x2="740" y2="443" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrB)"/>
+
+  <!-- ── SNOWBALL MODELS ── -->
+  <rect x="385" y="513" width="330" height="44" rx="8" fill="#1a0808" stroke="#f87171" stroke-width="1.5" filter="url(#s)"/>
+  <text x="550" y="531" text-anchor="middle" fill="#f87171" font-size="12" font-weight="700">:snowball-models</text>
+  <text x="550" y="548" text-anchor="middle" fill="#fca5a5" font-size="10">공유 데이터 모델 · kotlinx-serialization · JVM + KMP</text>
+
+  <!-- arrows core → models -->
+  <line x1="550" y1="493" x2="550" y2="513" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#arr)"/>
+
+  <!-- ── REMOTE API ── -->
+  <rect x="240" y="577" width="620" height="48" rx="8" fill="#150808" stroke="#f87171" stroke-width="1.5" stroke-dasharray="6,3" filter="url(#s)"/>
+  <text x="550" y="597" text-anchor="middle" fill="#f87171" font-size="12" font-weight="700">Remote API (Backend)</text>
+  <text x="550" y="614" text-anchor="middle" fill="#94a3b8" font-size="10">Ktor · Content Negotiation · JSON · REST</text>
+
+  <!-- arrow data → remote -->
+  <line x1="905" y1="493" x2="905" y2="555" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <line x1="905" y1="555" x2="760" y2="577" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#arr)"/>
+
+  <!-- ── TECH STACK FOOTER ── -->
+  <rect x="30" y="648" width="1040" height="52" rx="8" fill="#0a0a12" stroke="#1e293b" stroke-width="1" filter="url(#s)"/>
+  <text x="55" y="668" fill="#475569" font-size="9" font-weight="700" letter-spacing="2">TECH STACK</text>
+
+  <!-- badges -->
+  <rect x="55" y="674" width="110" height="18" rx="9" fill="#1c1200" stroke="#eab308" stroke-width="1"/>
+  <text x="110" y="686" text-anchor="middle" fill="#eab308" font-size="9">Decompose · Essenty</text>
+
+  <rect x="175" y="674" width="80" height="18" rx="9" fill="#1c0800" stroke="#fb923c" stroke-width="1"/>
+  <text x="215" y="686" text-anchor="middle" fill="#fb923c" font-size="9">Koin (DI)</text>
+
+  <rect x="265" y="674" width="100" height="18" rx="9" fill="#001c08" stroke="#22c55e" stroke-width="1"/>
+  <text x="315" y="686" text-anchor="middle" fill="#22c55e" font-size="9">Coroutines · Flow</text>
+
+  <rect x="375" y="674" width="95" height="18" rx="9" fill="#00101c" stroke="#38bdf8" stroke-width="1"/>
+  <text x="422" y="686" text-anchor="middle" fill="#38bdf8" font-size="9">Ktor Client</text>
+
+  <rect x="480" y="674" width="115" height="18" rx="9" fill="#10001c" stroke="#c084fc" stroke-width="1"/>
+  <text x="537" y="686" text-anchor="middle" fill="#c084fc" font-size="9">Compose Material3</text>
+
+  <rect x="605" y="674" width="90" height="18" rx="9" fill="#1c0010" stroke="#f87171" stroke-width="1"/>
+  <text x="650" y="686" text-anchor="middle" fill="#f87171" font-size="9">Serialization</text>
+
+  <rect x="705" y="674" width="90" height="18" rx="9" fill="#1c001c" stroke="#e879f9" stroke-width="1"/>
+  <text x="750" y="686" text-anchor="middle" fill="#e879f9" font-size="9">Coil3 (이미지)</text>
+
+  <rect x="805" y="674" width="85" height="18" rx="9" fill="#1c0808" stroke="#f87171" stroke-width="1"/>
+  <text x="847" y="686" text-anchor="middle" fill="#f87171" font-size="9">BigNum (연산)</text>
+
+  <rect x="900" y="674" width="100" height="18" rx="9" fill="#080010" stroke="#818cf8" stroke-width="1"/>
+  <text x="950" y="686" text-anchor="middle" fill="#818cf8" font-size="9">kotlinx-datetime</text>
+
+  <!-- ── DATA FLOW SUMMARY ── -->
+  <rect x="30" y="718" width="1040" height="82" rx="8" fill="#0a0a12" stroke="#1e293b" stroke-width="1" filter="url(#s)"/>
+  <text x="55" y="738" fill="#475569" font-size="9" font-weight="700" letter-spacing="2">DATA FLOW</text>
+
+  <!-- flow steps -->
+  <rect x="55" y="745" width="110" height="26" rx="5" fill="#12102a" stroke="#7c3aed" stroke-width="1"/>
+  <text x="110" y="762" text-anchor="middle" fill="#a78bfa" font-size="10">사용자 액션</text>
+
+  <line x1="165" y1="758" x2="183" y2="758" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrB)"/>
+
+  <rect x="185" y="745" width="130" height="26" rx="5" fill="#12102a" stroke="#6d28d9" stroke-width="1"/>
+  <text x="250" y="762" text-anchor="middle" fill="#c4b5fd" font-size="10">Component.onEvent()</text>
+
+  <line x1="315" y1="758" x2="333" y2="758" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrB)"/>
+
+  <rect x="335" y="745" width="120" height="26" rx="5" fill="#09270f" stroke="#10b981" stroke-width="1"/>
+  <text x="395" y="762" text-anchor="middle" fill="#34d399" font-size="10">UseCase 호출</text>
+
+  <line x1="455" y1="758" x2="473" y2="758" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrB)"/>
+
+  <rect x="475" y="745" width="130" height="26" rx="5" fill="#27180a" stroke="#f97316" stroke-width="1"/>
+  <text x="540" y="762" text-anchor="middle" fill="#fb923c" font-size="10">Repository 호출</text>
+
+  <line x1="605" y1="758" x2="623" y2="758" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrB)"/>
+
+  <rect x="625" y="745" width="120" height="26" rx="5" fill="#00101c" stroke="#38bdf8" stroke-width="1"/>
+  <text x="685" y="762" text-anchor="middle" fill="#38bdf8" font-size="10">Ktor HTTP 요청</text>
+
+  <line x1="745" y1="758" x2="763" y2="758" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrB)"/>
+
+  <rect x="765" y="745" width="130" height="26" rx="5" fill="#1a0808" stroke="#f87171" stroke-width="1"/>
+  <text x="830" y="762" text-anchor="middle" fill="#f87171" font-size="10">Result&lt;T&gt; 방출</text>
+
+  <line x1="895" y1="758" x2="913" y2="758" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrB)"/>
+
+  <rect x="915" y="745" width="130" height="26" rx="5" fill="#0d2d1a" stroke="#22c55e" stroke-width="1"/>
+  <text x="980" y="762" text-anchor="middle" fill="#22c55e" font-size="10">StateFlow → UI 갱신</text>
+
+  <text x="550" y="793" text-anchor="middle" fill="#334155" font-size="9">Clean Architecture · Component-Based (Decompose) · Reactive (Kotlin Flow) · Dependency Injection (Koin)</text>
+
+  <!-- ── FOOTER NOTE ── -->
+  <text x="550" y="810" text-anchor="middle" fill="#1e293b" font-size="9">Snowball · Kotlin Multiplatform · Android + iOS</text>
+</svg>

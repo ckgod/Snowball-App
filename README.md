@@ -1,35 +1,36 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+# Snowball
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+Android/iOS 투자 관리 앱 — Kotlin Multiplatform 기반
 
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+## Architecture
 
-### Build and Run Android Application
+![Architecture](./docs/architecture.svg)
 
-To build and run the development version of the Android app, use the run configuration from the run widget
-in your IDE’s toolbar or build it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:assembleDebug
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:assembleDebug
-  ```
+## Screenshots
 
-### Build and Run iOS Application
+<img src="./docs/home_screenshot.png" width="250" alt="Home"> <img src="./docs/account_screenshot.png" width="250" alt="Account"> <img src="./docs/backtest_screenshot.png" width="250" alt="Backtest">
 
-To build and run the development version of the iOS app, use the run configuration from the run widget
-in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and run it from there.
+## Module Structure
 
----
+| 모듈 | 역할 |
+|------|------|
+| `:app` | 앱 진입점 · DI 설정 |
+| `:navigation` | 화면 전환 · Back Stack 관리 (Decompose) |
+| `:feature:home` | 포트폴리오 · 투자 현황 |
+| `:feature:account` | 계좌 관리 |
+| `:feature:backtest` | 백테스트 엔진 · 결과 차트 |
+| `:feature:detail` | 종목 상세 · 가격 히스토리 |
+| `:core:ui` | 공통 UI 컴포넌트 · 테마 |
+| `:core:domain` | 비즈니스 로직 · UseCase |
+| `:core:data` | 데이터 접근 · Repository · Ktor |
+| `:snowball-models` | 공유 데이터 모델 |
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+## Tech Stack
+
+- **UI** — Compose Multiplatform · Material3
+- **Navigation** — Decompose · Essenty
+- **DI** — Koin
+- **Network** — Ktor Client
+- **Async** — Kotlin Coroutines · Flow
+- **Serialization** — kotlinx-serialization
+- **Image** — Coil3
